@@ -3,52 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
+    <title>Felipe Rubiano | Analista de Datos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        /* --- ESTILOS GENERALES (Minimalismo) --- */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Inter', sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
+            padding: 0;
             color: #333;
+            background-color: #ffffff;
+            line-height: 1.6;
         }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 20px;
+
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- BARRA DE NAVEGACIÓN --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: #fff;
+            border-bottom: 1px solid #eaeaea;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-brand {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: #000;
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            color: #555;
+            font-size: 0.95rem;
+        }
+        
+        .nav-links a:hover {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        /* --- SECCIÓN PRINCIPAL (HERO) --- */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 5%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 40px;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        .hero-text h2 {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #666;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .hero-image {
+            flex: 0 0 300px; /* Tamaño fijo para la imagen */
             text-align: center;
         }
+
+        .hero-image img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%; /* Esto la hace redonda */
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* --- CONTENIDO GENERAL --- */
         .container {
             max-width: 800px;
-            margin: auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: 0 auto;
+            padding: 40px 5%;
         }
-        h1 { margin: 0; }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h3.section-title {
+            font-size: 1.5rem;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            color: #222;
+        }
+
+        /* --- TARJETAS DE PROYECTOS (Lista limpia) --- */
+        .project-item {
+            margin-bottom: 25px;
+        }
+
+        .project-item h4 {
+            margin: 0 0 5px 0;
+            font-size: 1.1rem;
+        }
+        
+        .project-meta {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 40px;
+            background-color: #f9f9f9;
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 50px;
+        }
+
+        /* Estilo para móviles */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column-reverse; /* Pone la foto arriba en celular */
+                text-align: center;
+            }
+            .hero-text {
+                padding-right: 0;
+                padding-top: 20px;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Bienvenido a mi laboratorio</h1>
-    </header>
+    <nav>
+        <div class="nav-brand">Felipe Rubiano</div>
+        <div class="nav-links">
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Hola, soy Felipe Rubiano</h1>
+            <h2>Analista de Datos & Especialista en Visualización</h2>
+            <p>
+                Bienvenido a mi sitio web personal. Aquí comparto mis proyectos de análisis de datos, 
+                visualizaciones y experimentos de código. Me apasiona transformar datos complejos en 
+                historias claras y accionables.
+            </p>
+            <p>
+                Actualmente estoy enfocado en profundizar mis conocimientos en Python y Machine Learning.
+            </p>
+        </div>
+        <div class="hero-image">
+            <img src="perfil.jpg" alt="Foto de Felipe Rubiano" onerror="this.src='https://via.placeholder.com/250x250?text=Felipe'">
+        </div>
+    </div>
 
     <div class="container">
-        <h2>Sobre mí</h2>
-        <p>Hola, soy Felipe Rubiano.</p>
         
-        <h2>Mis Proyectos</h2>
-        <ul>
-            <li>Proyecto 1: Análisis de Datos</li>
-            <li>Proyecto 2: Visualización</li>
-        </ul>
-        
-        <h2>Contacto</h2>
-        <p>Puedes encontrarme en GitHub o LinkedIn.</p>
+        <section id="proyectos">
+            <h3 class="section-title">Proyectos Destacados</h3>
+            
+            <div class="project-item">
+                <h4><a href="#">Análisis Exploratorio de Datos (EDA)</a></h4>
+                <div class="project-meta">Python, Pandas, Matplotlib</div>
+                <p>
+                    Un análisis profundo sobre tendencias de mercado usando librerías de Python. 
+                    Limpieza de datos y generación de insights clave para la toma de decisiones.
+                </p>
+            </div>
+
+            <div class="project-item">
+                <h4><a href="#">Dashboard Interactivo de Ventas</a></h4>
+                <div class="project-meta">Power BI / Tableau</div>
+                <p>
+                    Visualización interactiva que permite filtrar ventas por región, categoría y fecha. 
+                    Diseñado para facilitar el reporte mensual de KPIs.
+                </p>
+            </div>
+            
+            <div class="project-item">
+                <h4><a href="#">Automatización de Reportes</a></h4>
+                <div class="project-meta">Python, Excel</div>
+                <p>
+                    Script creado para automatizar la consolidación de archivos Excel diarios, 
+                    ahorrando 5 horas de trabajo manual a la semana.
+                </p>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h3 class="section-title">Contacto</h3>
+            <p>
+                ¿Tienes alguna pregunta o propuesta? Puedes contactarme a través de mis redes:
+            </p>
+            <ul>
+                <li><strong>LinkedIn:</strong> <a href="#">linkedin.com/in/felipe-rubiano</a></li>
+                <li><strong>GitHub:</strong> <a href="#">github.com/felipe-rubiano</a></li>
+                <li><strong>Email:</strong> tu-email@ejemplo.com</li>
+            </ul>
+        </section>
+
     </div>
+
+    <footer>
+        <p>&copy; 2024 Felipe Rubiano. Creado con GitHub Pages.</p>
+    </footer>
 
 </body>
 </html>
